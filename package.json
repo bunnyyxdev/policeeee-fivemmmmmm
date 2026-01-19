@@ -1,0 +1,51 @@
+{
+  "name": "police-web-preview-city",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "init-db": "ts-node --project tsconfig.scripts.json ./scripts/initialize-db.ts",
+    "update-db": "ts-node --project tsconfig.scripts.json ./scripts/update-mongodb.ts",
+    "drop-email-index": "ts-node --project tsconfig.scripts.json ./scripts/drop-email-index.ts",
+    "remove-email-field": "ts-node --project tsconfig.scripts.json ./scripts/remove-email-field.ts"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "bcryptjs": "^2.4.3",
+    "formidable": "^3.5.1",
+    "google-auth-library": "^10.5.0",
+    "google-spreadsheet": "^5.0.2",
+    "googleapis": "^128.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.303.0",
+    "mongoose": "^8.0.3",
+    "next": "^14.0.4",
+    "next-auth": "^4.24.5",
+    "react": "^18.2.0",
+    "react-datepicker": "^7.3.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/formidable": "^3.4.5",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/node": "^20.10.6",
+    "@types/react": "^18.2.46",
+    "@types/react-datepicker": "^4.19.4",
+    "@types/react-dom": "^18.2.18",
+    "@types/uuid": "^9.0.7",
+    "autoprefixer": "^10.4.16",
+    "dotenv": "^17.2.3",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "ระบบตำรวจ Preview City",
+  "short_name": "Preview City Police",
+  "description": "ระบบจัดการสำหรับตำรวจ Preview City",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "categories": ["productivity", "business"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "เปิดหน้า Dashboard",
+      "url": "/dashboard"
+    },
+    {
+      "name": "แจ้งแคส",
+      "short_name": "Report Case",
+      "description": "แจ้งแคสและบันทึกรูปภาพ",
+      "url": "/dashboard/report-case"
+    }
+  ]
+}
