@@ -48,7 +48,36 @@ const nextConfig = {
           },
         ],
       },
+      // Fix ChunkLoadError by ensuring proper cache headers for Next.js chunks
+      {
+        source: '/_next/static/chunks/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
     ];
+  },
+  
+  // Generate build ID to prevent chunk loading issues
+  generateBuildId: async () => {
+    return process.env.BUILD_ID || `build-${Date.now()}`;
+  },
+  
+  // Enable experimental features to improve chunk loading
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
   },
 }
 
